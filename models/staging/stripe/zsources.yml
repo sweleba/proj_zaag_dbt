@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: stripe 
+    database: AAG_RAW_DEV
+    schema: STRIPE
+    tables:
+      - name: PAYMENT

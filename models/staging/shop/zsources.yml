@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: online
+    database: AAG_RAW_DEV
+    schema: SHOP
+    tables:
+      - name: CUSTOMERS
+      - name: ORDERS
