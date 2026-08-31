@@ -2,5 +2,31 @@ version: 2
 
 models:
   - name: stg_online_customers
-    config: 
-      materialized: table
+
+    columns:
+      - name: CUSTOMER_ID
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_online_orders
+    columns:
+      - name: ORDER_ID
+        tests:
+          - unique
+          - not_null
+      - name: CUSTOMER_ID
+        tests:
+          - not_null
+          - relationships:
+              arguments: 
+                to: ref('stg_online_customers')
+                field: CUSTOMER_ID
+      - name: STATUS 
+        tests:
+          - accepted_values:
+              arguments: 
+                values: ['completed','placed','return_pending','returned','shipped']
+      
+          
+          
