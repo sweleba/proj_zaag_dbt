@@ -38,13 +38,13 @@ models:
   aag_proj:
     aag_gold:
       +materialized: table
-      +schema: AAG_GOLD
+      +schema: GOLD
     aag_silver:
       +materialized: view
-      +schema: AAG_SILVER
+      +schema: SILVER
     aag_bronze:
       +materialized: view
-      +schema: AAG_BRONZE
+      +schema: BRONZE
     
     
      
