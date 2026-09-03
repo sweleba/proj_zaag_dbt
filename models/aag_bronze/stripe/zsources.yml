@@ -1,7 +1,13 @@
 version: 2
 sources:
-  - name: stripe 
+  - name: stripe_dev 
     database: AAG_RAW_DEV
     schema: STRIPE
+    tables:
+      - name: PAYMENT
+  
+  - name: stripe_prod
+    database: AAG_RAW_PROD
+    schema: STRIPE 
     tables:
       - name: PAYMENT
