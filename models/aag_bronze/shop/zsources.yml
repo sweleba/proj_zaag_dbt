@@ -1,9 +1,16 @@
 version: 2
 
 sources:
-  - name: online
+  - name: online_dev
     database: AAG_RAW_DEV
     schema: SHOP
+    tables:
+      - name: CUSTOMERS
+      - name: ORDERS
+      
+  - name: online_prod
+    database: AAG_RAW_PROD
+    schema: SHOP 
     tables:
       - name: CUSTOMERS
       - name: ORDERS
