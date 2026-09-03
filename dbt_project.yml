@@ -40,10 +40,10 @@ models:
       +materialized: table
       +schema: GOLD
     aag_silver:
-      +materialized: view
+      +materialized: table
       +schema: SILVER
     aag_bronze:
-      +materialized: view
+      +materialized: table
       +schema: BRONZE
     
     
